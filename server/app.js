@@ -84,3 +84,7 @@ app.delete('/delete-account', (req, res) => {
 app.listen(port, () => {
   console.log(`🚀 서버 실행 중: http://localhost:${port}`)
 })
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'login.html'));
+});
