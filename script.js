@@ -8,7 +8,7 @@ if (signupForm) {
     const PW = document.getElementById("signupPassword").value;
 
     try {
-      const res = await fetch("http://localhost:3000/signup", {
+      const res = await fetch("/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ID, PW })
@@ -39,7 +39,7 @@ if (loginForm) {
     const PW = document.getElementById("loginPassword").value;
 
     try {
-      const res = await fetch("http://localhost:3000/login", {
+      const res = await fetch("/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ID, PW })
