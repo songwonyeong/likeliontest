@@ -63,7 +63,7 @@
       function confirmDelete() {
   document.getElementById("confirmText").innerText = "정말 회원 탈퇴하시겠습니까?";
   showConfirm(() => {
-    fetch("http://localhost:3000/delete-account", {
+    fetch("/delete-account", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
